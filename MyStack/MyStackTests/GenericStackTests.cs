@@ -76,6 +76,20 @@ namespace MyStack.Tests
             Assert.AreEqual(" 1 2 3", myStack.ToString());
         }
 
+        [TestMethod()]
+        public void LengthTest()
+        {
+            GenericStack<int> myStack = CreateIntStack();
+            Assert.AreEqual(3, myStack.Length);
+        }
+
+        [TestMethod()]
+        public void FreeSpacesTest()
+        {
+            GenericStack<int> myStack = CreateIntStack();
+            Assert.AreEqual(0, myStack.FreeSpaces);
+        }
+
         public GenericStack<int> CreateIntStack()
         {
             GenericStack<int> myStack = new GenericStack<int>(3);
